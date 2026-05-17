@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ASCII CAMERA</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+<body>
+
+    <!-- BACKGROUND GLOW -->
+
+    <div id="bgGlow"></div>
+
+
+
+    <!-- LANDING PAGE -->
+
+    <div id="landing">
+
+        <h1 id="title">
+            ASCII CAMERA
+        </h1>
+
+        <p id="subtitle">
+            Real-time ASCII rendering
+        </p>
+
+        <button id="startBtn">
+            ENTER
+        </button>
+
+    </div>
+
+
+
+    <!-- ASCII OUTPUT -->
+
+    <pre id="ascii"></pre>
+
+
+
+    <!-- CONTROLS -->
+
+    <div id="controls">
+
+        <button id="photoBtn"
+                class="controlBtn">
+            📸
+        </button>
+
+        <button id="recordBtn"
+                class="controlBtn">
+            ⏺
+        </button>
+
+        <button id="colorBtn"
+                class="controlBtn">
+            🎨
+        </button>
+
+    </div>
+
+
+
+    <!-- HIDDEN ELEMENTS -->
+
+    <video id="video"
+           autoplay
+           playsinline></video>
+
+    <canvas id="canvas"></canvas>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

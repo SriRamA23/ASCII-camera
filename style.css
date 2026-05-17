@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    color: white;
+
+    font-family: monospace;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-rendering: optimizeSpeed;
+
+    -webkit-font-smoothing: none;
+}
+
+
+
+/* BACKGROUND GLOW */
+
+#bgGlow {
+
+    position: fixed;
+
+    width: 900px;
+    height: 900px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.06),
+            transparent 70%
+        );
+
+    filter: blur(80px);
+
+    animation:
+        floatGlow 8s ease-in-out infinite;
+
+    z-index: 0;
+}
+
+
+
+@keyframes floatGlow {
+
+    0% {
+
+        transform:
+            translateY(-20px)
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            translateY(20px)
+            scale(1.08);
+    }
+
+    100% {
+
+        transform:
+            translateY(-20px)
+            scale(1);
+    }
+}
+
+
+
+/* LANDING */
+
+#landing {
+
+    position: absolute;
+
+    z-index: 10;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 22px;
+
+    transition: 1s;
+}
+
+
+
+/* TITLE */
+
+#title {
+
+    font-size: 82px;
+
+    font-weight: 900;
+
+    letter-spacing: 10px;
+
+    color: white;
+
+    text-shadow:
+        0 0 25px rgba(255,255,255,0.08);
+}
+
+
+
+/* SUBTITLE */
+
+#subtitle {
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+
+/* START BUTTON */
+
+#startBtn {
+
+    margin-top: 20px;
+
+    padding: 16px 42px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255,255,255,0.04);
+
+    color: white;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+
+
+#startBtn:hover {
+
+    transform:
+        scale(1.05);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-color:
+        rgba(255,255,255,0.22);
+}
+
+
+
+/* ASCII OUTPUT */
+
+#ascii {
+
+    position: absolute;
+
+    z-index: 1;
+
+    font-size: 9px;
+
+    line-height: 9px;
+
+    white-space: pre;
+
+    color: white;
+
+    user-select: none;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+}
+
+
+
+/* CONTROLS */
+
+#controls {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 18px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(20,20,20,0.65);
+
+    backdrop-filter: blur(18px);
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.5);
+
+    z-index: 20;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.5s;
+}
+
+
+
+/* CONTROL BUTTONS */
+
+.controlBtn {
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    transition: 0.2s;
+}
+
+
+
+.controlBtn:hover {
+
+    transform:
+        scale(1.08);
+
+    background:
+        rgba(255,255,255,0.16);
+}
+
+
+
+/* RECORDING */
+
+#recordBtn.recording {
+
+    background: #ff2d2d;
+
+    box-shadow:
+        0 0 18px rgba(255,0,0,0.7);
+}
+
+
+
+/* HIDDEN ELEMENTS */
+
+video,
+canvas {
+
+    display: none;
+}
